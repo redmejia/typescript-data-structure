@@ -16,8 +16,9 @@ console.log(products); // [ { name: 'shirt', price: 20 }, { name: 'Hat', price: 
 console.log(discountProducts); // [ { name: 'shirt', price: 18 }, { name: 'Hat', price: 13.5 } ]
 const userList = [
     { name: "Reynaldo", age: 34, isStudent: false },
-    { name: "Reynaldo", age: 54, isStudent: true },
     { name: "Karla", age: 42, isStudent: true },
+    { name: "Richard", age: 22, isStudent: true },
+    { name: "Robert", age: 23, isStudent: true },
     { name: "Lina", age: 23, isStudent: true },
     { name: "Sofia", age: 12, isStudent: false },
     { name: "Alejandra", age: 34, isStudent: false },
@@ -25,10 +26,12 @@ const userList = [
 const newUserList = userList.filter(user => user.name === "Reynaldo");
 console.log(userList);
 // [
-//     { name: 'Reynaldo', age: 34, isStudent: false },
-//     { name: 'Karla', age: 42, isStudent: true },
-//     { name: 'Lina', age: 23, isStudent: true },
-//     { name: 'Sofia', age: 12, isStudent: false },
-//     { name: 'Alejandra', age: 34, isStudent: false }
+//     { name: "Reynaldo", age: 34, isStudent: false },
+//     { name: "Karla", age: 42, isStudent: true },
+//     { name: "Richard", age: 22, isStudent: true },
+//     { name: "Robert", age: 23, isStudent: true },
+//     { name: "Lina", age: 23, isStudent: true },
+//     { name: "Sofia", age: 12, isStudent: false },
+//     { name: "Alejandra", age: 34, isStudent: false },
 // ]
 console.log(newUserList); // [ { name: 'Reynaldo', age: 34, isStudent: false } ]
