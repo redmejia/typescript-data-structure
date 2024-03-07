@@ -10,9 +10,9 @@ export class Node {
 
 export class LinkedList {
 
-    head: Node | null;
-    tail: Node | null;
-    len: number;
+    private head: Node | null;
+    private tail: Node | null;
+    private len: number;
 
     constructor() {
         this.head = null;
@@ -27,13 +27,11 @@ export class LinkedList {
         if (this.head == null) {
             this.head = newNode;
             this.tail = newNode;
-        }
-
-        if (this.tail != null) {
-            this.tail.next = newNode;
+        }else {
+            this.tail!.next = newNode;
             this.tail = newNode;
         }
-        this.len++
+        this.len++;
 
     }
 
@@ -68,5 +66,9 @@ export class LinkedList {
 const myList = new LinkedList();
 myList.append(1);
 myList.append(2);
+myList.append(3);
+
+
+myList.delete();
 
 console.log(myList)

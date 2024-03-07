@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LinkedList = exports.Node = void 0;
+exports.Node = void 0;
 class Node {
-    constructor(item) {
-        this.item = item;
+    constructor(data) {
+        this.data = data;
         this.next = null;
     }
 }
 exports.Node = Node;
+// Define the LinkedList class
 class LinkedList {
     constructor() {
         this.head = null;
@@ -15,8 +16,8 @@ class LinkedList {
         this.len = 0;
     }
     // append
-    append(item) {
-        const newNode = new Node(item);
+    append(data) {
+        const newNode = new Node(data);
         if (this.head == null) {
             this.head = newNode;
             this.tail = newNode;
@@ -27,7 +28,7 @@ class LinkedList {
         }
         this.len++;
     }
-    // delete 
+    // delete
     delete() {
         if (this.head != null) {
             this.head = this.head.next;
@@ -39,19 +40,28 @@ class LinkedList {
     size() {
         return this.len;
     }
-    // print 
+    // traverse
     print() {
         let current = this.head;
-        while (current != null) {
-            console.log(current.item);
+        while (current) {
+            console.log(current.data);
             current = current.next;
         }
     }
 }
-exports.LinkedList = LinkedList;
-const myList = new LinkedList();
-myList.append(1);
-myList.append(2);
-myList.append(3);
-myList.delete();
-console.log(myList);
+const numberList = new LinkedList();
+numberList.append(1);
+numberList.append(2);
+numberList.print();
+const stringList = new LinkedList();
+stringList.append("Hola");
+stringList.append("Hello");
+stringList.delete();
+stringList.print();
+const personList = new LinkedList();
+personList.append({ name: "Reynaldo", age: 56 });
+personList.append({ name: "Alexandra", age: 23 });
+personList.append({ name: "Robert" });
+console.log(personList);
+personList.delete();
+personList.print();
