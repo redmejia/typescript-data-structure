@@ -1,6 +1,14 @@
 /Array/*.*js
 /Array-methods/*.*js
 
+/LinkedList/*.*js
+/LinkedListGenerics/*.*js
+/QueueArray/*.*js
+
+/StackArray/*.*js
+/StackGeneric/*.*js
+/StackLinkedList/*.*js
+
 /QueueLinkedList/*.*js
 /QueueLListGenerics/*.*js
 
