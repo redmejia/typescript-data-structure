@@ -1,4 +1,5 @@
 /Array/*.*js
+/Array-methods/*.*js
 
 /QueueLinkedList/*.*js
 /QueueLListGenerics/*.*js
